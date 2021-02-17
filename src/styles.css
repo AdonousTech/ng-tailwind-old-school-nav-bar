@@ -31,7 +31,7 @@ input.middle:focus {
 
 .mat-sidenav {
     background-color: transparent !important;
-    width: 400px;
+    width: 300px;
 }
 /*Set to 90vh to prevent double scroll bars. Setting to 100 creates 2nd vertical scroll.
 Not setting this property cuts off side nav items (when main content does not fit window) inner container, as the side nav
