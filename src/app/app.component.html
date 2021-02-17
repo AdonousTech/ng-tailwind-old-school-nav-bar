@@ -1,32 +1,30 @@
 <div>
   <!--SideNav Hamburger Icon (interactive)-->
-  <!--working ::: todo: extract to component-->
   <!--SideNav Container-->
   <mat-sidenav-container cdkScrollable role="main" autosize>
     <mat-sidenav role="navigation" #sidenav mode="side" opened="true">
-      SideNav
-        <!--nav component-->
-<!--         <at-vertical-nav-container>
-          <div atVerticalNavHeader
-            [text]="'Side Menu'"
-            [items]="[{text: 'First Link', route: ''}]">
-          </div>
-      </at-vertical-nav-container> -->
+      <section class="bg-gray-700 h-screen py-5">
+        <nav>
+          <ul class="list-none p-0 m-0">
+            <li class="-mt-1">Icon Bar Demo</li>
+            <li class="-mt-1">Icon Bar Demo</li>
+          </ul>
+        </nav>
+      </section>
+
+
     </mat-sidenav>
     <!-- right sidenav (reserved)-->
     <!-- <mat-sidenav role="region" class="mat-sidenav-end" position="end" mode="side" opened="false" #sidenavend></mat-sidenav> -->
   
 
     <!--main component router-->
-      <router-outlet></router-outlet>
+      <div class="bg-gray-800">
+        <router-outlet></router-outlet>
+      </div>
+
   
   
   </mat-sidenav-container>
   
   </div>
-
-  <footer>
-    <div class="d-flex justify-content-center py-4 fixed-bottom">
-      <small>Copyright 2020-2021 Adonous Tech LLC. All Rights Reserved.</small>
-    </div>
-  </footer>

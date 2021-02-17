@@ -29,10 +29,27 @@ input.middle:focus {
     outline: none !important;
 }
 
-/*Mat menu button overrides*/
-button.mat-menu-item:focus {
-    border: 0 !important;
-    outline: none !important;
+.mat-sidenav {
+    background-color: transparent !important;
+    width: 400px;
+}
+/*Set to 90vh to prevent double scroll bars. Setting to 100 creates 2nd vertical scroll.
+Not setting this property cuts off side nav items (when main content does not fit window) inner container, as the side nav
+container is auto-adjusting to fit contents*/
+.mat-sidenav-container {
+    height: 100vh;
+}
+
+.mat-sidenav-content {
+    background-color: transparent !important;
+}
+
+.mat-drawer-inner-container {
+    background-color: transparent !important;
+}
+
+.mat-drawer-side {
+    border-right: 0 !important;
 }
 
 /*GLOBAL Media Queries*/
