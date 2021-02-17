@@ -39,8 +39,7 @@
             ],
             "styles": [
               "src/global-mat.scss",
-              "src/styles.css",
-              "src/global-cards.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
