@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { CustomMaterialModule } from './shared/custom-material';
 import { AppComponent } from './app.component';
 
+// Demo
+import { DemoRoutingModule } from './features/demo';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +20,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     CustomMaterialModule,
     HttpClientModule,
+    DemoRoutingModule,
     AppRoutingModule
   ],
   providers: [],
