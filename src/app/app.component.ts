@@ -27,15 +27,12 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   @ViewChild('sidenav') public sidenav: MatSidenav | undefined;
 
-  title = 'Spa Starter One - Adonous Tech LLC';
+  title = 'Old School NavBar Demo with TailWindCSS and Angular - Adonous Tech LLC';
   hasGlobalError: boolean | undefined;
   globalError: string | undefined;
   isWeb: boolean | undefined;
   isTablet: boolean | undefined;
   isHandset: boolean | undefined;
-
-  // theme
-  lightTheme: boolean = true;
 
   // subscriptions
   initialViewportSubscription: Subscription | undefined;
