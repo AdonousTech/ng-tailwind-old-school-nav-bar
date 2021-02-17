@@ -1,0 +1,26 @@
+version: 0.2
+env:
+  variables:
+    S3_BUCKET: ""
+phases: 
+  install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
+    commands:
+      - echo Installing source NPM depenencies
+      - npm install
+      - npm install -g @angular/cli
+  build:
+    commands:
+      - echo BUILD started on `date`
+      - NODE_OPTIONS="--max-old-space-size=6144" ng build --configuration="production"
+  post_build:
+    commands:
+     - aws s3 cp dist s3://${S3_BUCKET} --recursive
+     - echo BUILD completed on `date`
+artifacts:
+  files:
+      - '**/*'
+  discard-paths: yes
+  base-directory: 'dist*'

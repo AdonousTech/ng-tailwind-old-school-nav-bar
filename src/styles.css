@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./tailwind_custom.scss";
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/***Disable border on focused icons and links click. In certain instances
+div is used with router link (see sidenav implementation) and this also removes the
+outline on focused divs with link properties***/
+i:focus, a:focus, div:focus         {
+    outline-width: 0 !important; 
+}
+
+/*Disable the inner border on focused input element*/
+input.middle:focus {
+    outline-width: 0 !important;
+    outline: none !important;
+}
+
+/*Mat menu button overrides*/
+button.mat-menu-item:focus {
+    border: 0 !important;
+    outline: none !important;
+}
+
+/*GLOBAL Media Queries*/
+@media only screen and (max-width: 360px) {
+
+}
+
+@media only screen and (max-width: 576px) {
+
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
