@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconNavBarComponent } from './icon-nav-bar/icon-nav-bar.component';
+import { RouterModule } from '@angular/router';
+import { IconNavBarComponent } from './icon-nav-bar.component';
 
 
 
 @NgModule({
   declarations: [IconNavBarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+  ],
+  exports: [
+    IconNavBarComponent
   ]
 })
 export class IconNavBarModule { }
