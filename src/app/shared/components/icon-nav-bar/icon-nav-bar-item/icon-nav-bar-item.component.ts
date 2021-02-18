@@ -7,11 +7,13 @@ import { Subscription } from 'rxjs';
 import { SharedViewportService,
          IViewport } from '../../../providers';
 import { IconNavBarItemBindingDirective } from '../providers/icon-nav-bar-item-binding.directive';
+import { FadeInBasic } from '../../../../shared';
 
 @Component({
   selector: 'app-icon-nav-bar-item',
   templateUrl: './icon-nav-bar-item.component.html',
-  styleUrls: ['./icon-nav-bar-item.component.css']
+  styleUrls: ['./icon-nav-bar-item.component.css'],
+  animations: [ FadeInBasic ]
 })
 export class IconNavBarItemComponent extends IconNavBarItemBindingDirective implements OnInit, OnDestroy  {
 
