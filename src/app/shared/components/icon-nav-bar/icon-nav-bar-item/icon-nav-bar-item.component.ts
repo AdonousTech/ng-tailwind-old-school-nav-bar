@@ -1,6 +1,7 @@
 import { Component,
          OnInit,
-         Input, 
+         Output,
+         EventEmitter,
          OnDestroy} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SharedViewportService,
@@ -13,6 +14,9 @@ import { IconNavBarItemBindingDirective } from '../providers/icon-nav-bar-item-b
   styleUrls: ['./icon-nav-bar-item.component.css']
 })
 export class IconNavBarItemComponent extends IconNavBarItemBindingDirective implements OnInit, OnDestroy  {
+
+  // API
+  @Output() iconActionOutput: EventEmitter<string> = new EventEmitter(); 
 
   // Internal
   isWeb: boolean;
@@ -33,6 +37,14 @@ export class IconNavBarItemComponent extends IconNavBarItemBindingDirective impl
 
   ngOnDestroy(): void {
     this.removeSubscriptions();
+  }
+
+  /**
+   * Emits the iconId as string to parent component
+   * @memberof IconNavBarItemComponent
+   */
+  emitIdToParent() {
+    this.iconActionOutput.emit(this.iconId);
   }
 
     /**

@@ -39,6 +39,10 @@ export class IconNavBarComponent implements OnInit, OnDestroy {
     this.removeSubscriptions();
   }
 
+  onChildItemAction(iconId: string) {
+    console.log(`Navigation icon with Id ${iconId} was clicked!`);
+  }
+
     /**
    * Start viewport subscriptions.
    * @private
