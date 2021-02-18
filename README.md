@@ -1,14 +1,21 @@
-# Tailwind Starter Spa One
+# Old School Icon Nav Bar Angular/TailWindCSS Component
 
 ## Releases
 - RELEASE 001 (v1.0.0) 2/17/2021 
     - First release
-- RELEASE 002 (v1.0.1) 2/17/2021
-    - Minor setup tweaks
+
 
 ## Description
 
-This is a barebones starter spa for **Angular** and **Tailwind CSS**.
+A basic component built with **Angular** and **Tailwind CSS**.
+
+The application itself is a great tool to learn Angular. Check out the way I have structured the app
+and the component. Thanks!
+
+********************************************************************************************************
+
+### You might also be interested in:
+
 - Architecture
     - No backend architecture wired to this starter spa. Layers need to be individually added as needed
 - Authentication
