@@ -1,1 +1,13 @@
-<p>icon-nav-bar works!</p>
+<!--Templates-->
+
+<!--Layout-->
+<div [ngClass]="{'flex-row': isWeb || isTablet, 'flex-col': isHandset, 'max-w-max': isHandset}" class="flex bg-gray-900 rounded-sm text-white min-w-max">
+    <div *ngFor="let item of itemBindings">
+        <app-icon-nav-bar-item
+            [iconText]="item.iconText"
+            [iconId]="item.iconId"
+            [linkRoute]="item.linkRoute"
+            [icon]="item.icon">
+        </app-icon-nav-bar-item>
+    </div>
+</div>

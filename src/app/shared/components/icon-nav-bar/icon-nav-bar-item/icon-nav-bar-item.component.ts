@@ -1,24 +1,18 @@
-import { Component, 
-         ContentChildren,
-         ViewChildren,
-         QueryList,
+import { Component,
          OnInit,
-         OnDestroy } from '@angular/core';
-import { IconNavBarItemComponent } from './icon-nav-bar-item/icon-nav-bar-item.component';
-import { IconNavBarItemBindingDirective } from './providers/icon-nav-bar-item-binding.directive';
+         Input, 
+         OnDestroy} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { SharedViewportService,
-         IViewport } from '../../providers';
+         IViewport } from '../../../providers';
+import { IconNavBarItemBindingDirective } from '../providers/icon-nav-bar-item-binding.directive';
 
 @Component({
-  selector: 'app-icon-nav-bar',
-  templateUrl: './icon-nav-bar.component.html',
-  styleUrls: ['./icon-nav-bar.component.css']
+  selector: 'app-icon-nav-bar-item',
+  templateUrl: './icon-nav-bar-item.component.html',
+  styleUrls: ['./icon-nav-bar-item.component.css']
 })
-export class IconNavBarComponent implements OnInit, OnDestroy {
-
-  @ContentChildren(IconNavBarItemBindingDirective) itemBindings: QueryList<IconNavBarItemBindingDirective>;
-  @ViewChildren(IconNavBarItemComponent) itemComponents: QueryList<IconNavBarItemComponent>;
+export class IconNavBarItemComponent extends IconNavBarItemBindingDirective implements OnInit, OnDestroy  {
 
   // Internal
   isWeb: boolean;
@@ -29,7 +23,9 @@ export class IconNavBarComponent implements OnInit, OnDestroy {
   initialViewportSubscription: Subscription;
   viewportSubscription: Subscription;
 
-  constructor(private viewportService: SharedViewportService) { }
+  constructor(private viewportService: SharedViewportService) {
+    super()
+   }
 
   ngOnInit(): void {
     this.implementViewportSubscriptions();
@@ -42,7 +38,7 @@ export class IconNavBarComponent implements OnInit, OnDestroy {
     /**
    * Start viewport subscriptions.
    * @private
-   * @memberof IconNavBarComponent
+   * @memberof IconNavBarItemComponent
    */
   private implementViewportSubscriptions() {
     // initial viewport subscription
@@ -67,7 +63,7 @@ export class IconNavBarComponent implements OnInit, OnDestroy {
   /**
    * Remove viewport subscriptions.
    * @private
-   * @memberof IconNavBarComponent
+   * @memberof IconNavBarItemComponent
    */
   private removeSubscriptions() {
     this.initialViewportSubscription.unsubscribe();
